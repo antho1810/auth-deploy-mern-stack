@@ -1,0 +1,25 @@
+{
+  "name": "mern-stack-auth-and-deployment",
+  "version": "1.0.0",
+  "description": "desarrollando auth mern stack ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "dev": "concurrently \"npm run server\" \"npm start --prefix front-auth\" ",
+    "netfily-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front-auth && npm run build --prefix front-auth"
+
+  },
+  "author": "Anthony Romero",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
